@@ -29,6 +29,7 @@ if (process.env.NODE_ENV === 'production') {
 
 (async function start() {
   const capabilities = await getCapabilities();
+  window.capabilities = capabilities;
   if (
     !capabilities.crypto &&
     window.location.pathname !== '/unsupported/crypto'
